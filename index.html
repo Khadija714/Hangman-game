@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- First Screen -->
+  <div id="player-screen" class="screen">
+    <div class="neumorphism-box">
+      <h1>Hangman Game</h1>
+      <input type="text" id="playerName" placeholder="Enter your name" />
+      <button id="startBtn">Start Game</button>
+    </div>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen hidden">
+    <div class="game-container">
+      <p id="status">Tries left: 3</p>
+      <p id="word"></p>
+      <div id="keyboard"></div>
+      <svg id="hangman" height="200" width="200">
+        <line x1="10" y1="190" x2="150" y2="190" />
+        <line x1="80" y1="190" x2="80" y2="20" />
+        <line x1="80" y1="20" x2="140" y2="20" />
+        <line x1="140" y1="20" x2="140" y2="40" />
+        <circle id="head" cx="140" cy="55" r="15" class="hidden" />
+        <line id="body" x1="140" y1="70" x2="140" y2="120" class="hidden" />
+        <line id="leg" x1="140" y1="120" x2="120" y2="150" class="hidden" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="result-screen" class="screen hidden">
+    <div class="result-box">
+      <h2 id="result-message"></h2>
+      <div class="btn-group">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
